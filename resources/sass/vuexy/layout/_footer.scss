@@ -1,0 +1,115 @@
+/*=========================================================================================
+    File Name: _footer.scss
+    Description: Footer styles
+    ----------------------------------------------------------------------------------------
+    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+      Author: Pixinvent
+    Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+
+.footer-sticky {
+  .the-footer {
+    position: fixed;
+    background: #333333;
+    bottom: 0;
+    height: 48px;
+    border-top: 4px solid #E86266;
+    width: calc(100% - 260px);
+    box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, .05);
+    z-index: 40000;
+  }
+
+  .content-area-lg {
+    .the-footer {
+      width: calc(100% - 80px);
+    }
+  }
+
+  .content-area-full {
+    .the-footer {
+      width: 100%;
+    }
+  }
+
+  .router-view {
+    padding-bottom: 5rem;
+  }
+}
+
+.footer-hidden {
+  .the-footer {
+    display: none;
+  }
+}
+
+.the-footer {
+  padding: 1rem 2.2rem;
+}
+
+.tooltip.popover{
+    display: block !important;
+    z-index: 1000;
+    .tooltip-arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        margin: 5px;
+        border-color: black;
+        z-index: 1;
+    }
+    .tooltip-inner {
+        background: black;
+        color: white;
+        border-radius: 16px;
+        padding: 5px 10px 4px;
+    }
+    &[x-placement^="right"] {
+        margin-left: 5px;
+
+        .tooltip-arrow {
+            border-width: 16px 16px 16px 0;
+            border-left-color: transparent !important;
+            border-top-color: transparent !important;
+            border-bottom-color: transparent !important;
+            left: -12px;
+            top: calc(50% - 5px);
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &.popover {
+        $color: #e0e0e0;;
+
+        .popover-inner {
+            background: $color;
+            color: black;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 5px 30px rgba(black, .1);
+        }
+
+        .popover-arrow {
+            border-color: $color;
+        }
+        .vs-table--tbody-table .vs-table--thead th{
+            background-color: rgba(var(--vs-primary),1);
+        }
+        .popup-content{
+            background: white;
+        }
+    }
+
+    &[aria-hidden='true'] {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .15s, visibility .15s;
+    }
+
+    &[aria-hidden='false'] {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .15s;
+    }
+}
